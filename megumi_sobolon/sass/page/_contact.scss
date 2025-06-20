@@ -1,0 +1,26 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.contact {
+    background: url(../img/contact-bg.png) no-repeat center center / cover;
+
+}
+
+.contact__inner {
+    padding: 56px 0;
+    @include mq(pc) {
+      padding: 160px 0;
+    }
+
+}
+
+.inner {
+
+}
+
+
+.section-title--contact {
+    color: $color-key;
+
+}
+

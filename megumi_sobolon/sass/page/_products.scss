@@ -19,7 +19,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 42px;
+    gap: 43px;
 
     @include mq(pc) {
       gap: 44px;
@@ -31,7 +31,7 @@
 .products__cards {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 38px;
 
     @include mq(pc) {
         flex-direction: row;
@@ -70,7 +70,6 @@
 }
 
 .products__card--text {
-    letter-spacing: 0.003em;
     line-height: 172%;
 }
 

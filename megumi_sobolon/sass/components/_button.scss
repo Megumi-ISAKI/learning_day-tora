@@ -1,0 +1,25 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+// コンポーネント用のSCSSをここに記述
+
+.button {
+    width: calc(150px + 4px * 2);
+    height: calc(24px + 12px * 2);
+    display: flex;
+    padding: 12px 4px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-key;
+    color: $color-key;
+    background: #FFF;
+    margin: 0 auto;
+    transition: all 0.3s linear;
+    font-size: 14px;
+    font-weight: 600;
+
+    &:hover {
+        background: $color-key;
+        color: #fefefe;
+    }
+}
