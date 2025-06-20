@@ -1,0 +1,65 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+
+
+.concept {
+
+}
+
+.concept__inner {
+    padding: 0 15px;
+
+    @include mq(pc) {
+        padding: 0 40px;
+    }
+}
+
+.concept__content {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+
+    @include mq(pc) {
+        flex-direction: row;
+        gap: 80px;
+        align-items: center;
+    }
+}
+
+.concept__content--img {
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+
+        @include mq(pc) {
+            width: 600px;
+            height: auto;
+        }
+    }
+
+}
+
+.concept__content--text {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    @include mq(pc) {
+      gap: 40px;
+      width: 520px;
+    }
+}
+
+.concept__content--title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.concept__content--paragraph {
+    line-height: 167%;
+    letter-spacing: -0.001em;
+}
+

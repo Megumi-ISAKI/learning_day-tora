@@ -1,0 +1,18 @@
+.fv {
+  margin: 0 15px;
+  position: relative;
+}
+.fv .main__visual {
+  display: block;
+}
+.fv .main__visual img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.fv__content {
+  margin-top: 30px;
+}

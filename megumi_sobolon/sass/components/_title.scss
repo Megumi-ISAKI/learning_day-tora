@@ -1,0 +1,31 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.section-title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+    display: block;
+    text-align: center;
+    margin-bottom: 46px;
+
+    @include mq(pc) {
+        font-size: 40px;
+        margin-bottom: 64px;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 1px;
+        background: $color-key;
+        margin: 27.5px auto 0;
+
+        @include mq(pc) {
+            margin: 24px auto 0;
+        }
+    }
+
+
+}

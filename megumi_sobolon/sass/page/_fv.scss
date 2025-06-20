@@ -1,0 +1,72 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+
+// メインビジュアルセクション
+.fv {
+    margin: 5px 15px 0;
+
+    @include mq(pc) {
+        margin: 5px 40px 0;
+    }
+
+    // pictureタグのスタイル
+    .main__visual {
+        display: block;
+        width: 100%;
+
+
+
+        // sourceタグのスタイル（必要に応じて）
+        source {
+            // sourceタグは通常スタイルは不要ですが、
+            // 特別な場合に使用できます
+        }
+
+        // imgタグのスタイル
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; // 画像のフィット方法を指定
+            display: block; // インライン要素の隙間を除去
+
+            @include mq(pc) {
+                width: 990px;
+                height: 660px;
+                margin-left: auto;
+
+            }
+        }
+    }
+}
+
+.fv__inner {
+    position: relative;
+}
+
+.fv__content {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include mq(pc) {
+        position: absolute;
+        margin-top: 0;
+        top: 168px;
+        left: 0;
+        padding: 83px 40px 80px 0;
+        background: $background-base;
+    }
+}
+
+.fv__title {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 170%;
+    letter-spacing: -0.005em;
+}
+
+.fv__text {
+    line-height: 167%;
+}

@@ -1,0 +1,61 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.question {
+    margin-top: 96px;
+    width: 100%;
+    background: url(../img/question-sp.png) no-repeat top center / cover;
+    height: 490px;
+
+    @include mq(pc) {
+        margin-top: 160px;
+        background: url(../img/question-pc.png) no-repeat center center / cover;
+        height: 478px;
+    }
+
+}
+
+.question__inner {
+    padding: 0 15px;
+
+    @include mq(pc) {
+        padding: 0 40px;
+    }
+}
+
+.question__content {
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 181px;
+
+    @include mq(pc) {
+        padding-top: 124px;
+        gap: 23px;
+    }
+
+}
+
+.question__content--head {
+    font-size: 20px;
+    font-weight: 600;
+
+    @include mq(pc) {
+        font-size: 22px;
+    }
+
+}
+
+.question__content--body {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 171%;
+
+    @include mq(pc) {
+        font-size: 16px;
+        line-height: 168%;
+    }
+
+}
+

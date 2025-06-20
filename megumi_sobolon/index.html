@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="inner header__inner">
+      <h1 class="header__logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="logo" width="240" height="44">
+        </a>
+      </h1>
+      <!-- メニュー -->
+      <nav class="header__nav">
+        <a href="#concept" class="header__nav--item">Concept</a>
+        <a href="#feature" class="header__nav--item">Feature</a>
+        <a href="#products" class="header__nav--item">Products</a>
+        <a href="#news" class="header__nav--item">News</a>
+        <a href="#contact" class="header__nav--item">Contact</a>
+      </nav>
+      <!-- ハンバーガーメニュー -->
+      <div class="header__icon">
+        <span class="header__icon--bar"></span>
+        <span class="header__icon--bar"></span>
+        <span class="header__icon--bar"></span>
+      </div>
+      <!-- ドロワーメニュー -->
+      <div class="drawer">
+        <div class="drawer__inner">
+          <nav class="drawer__nav">
+            <ul class="drawer__list">
+              <li><a href=""></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+            <a href="#contact" class="drawer__btn">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="fv">
+      <div class="fv__inner inner">
+
+        <picture class="main__visual">
+          <source media="(min-width: 768px)" srcset="./img/pc-top.png" width="1280" height="500">
+          <img src="./img/sp-top.png" alt="mainvisual" decoding="async" width="375" height="250">
+        </picture>
+
+        <div class="fv__content">
+          <h2 class="fv__title">“可愛い” で<br class="u-pc">地球を守る！</h2>
+          <p class="fv__text">海洋マイクロプラスチックを素材とした <br>
+            ハンドメイドアクセサリー「sobolon」</p>
+        </div>
+      </div>
+    </div>
+    <!-- Concept -->
+    <section id="concept" class="section concept">
+      <div class="concept__inner inner">
+        <h2 class="section-title">Concept</h2>
+        <div class="concept__content">
+          <div class="concept__content--img">
+            <img src="./img/concept.png" alt="concept" width="500" height="500">
+          </div>
+          <div class="concept__content--text">
+            <h3 class="concept__content--title">可愛くてステキなのは当たり前。<br>
+              地球にやさしくあるのも当たり前。
+            </h3>
+            <p class="concept__content--paragraph">
+              「sobolon」は、海洋汚染の要因であるマイクロプラスチックを回収し、それらを素材としたハンドメイドアクセサリーを製作しているブランドです。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Feature -->
+    <section id="feature" class="section feature">
+      <div class="feature__inner inner">
+        <h2 class="section-title">Feature</h2>
+        <div class="feature__cards">
+          <div class="feature__card">
+            <div class="feature__card--img">
+              <img src="./img/feature-1.png" alt="feature" width="200" height="200">
+            </div>
+            <div class="feature__card--text">素材は海で採れた<br>
+              マイクロプラスチック</div>
+          </div>
+          <div class="feature__card">
+            <div class="feature__card--img">
+              <img src="./img/feature-2.png" alt="feature" width="200" height="200">
+            </div>
+            <div class="feature__card--text">個性あふれる<br>
+              “可愛い”デザイン</div>
+          </div>
+          <div class="feature__card">
+            <div class="feature__card--img">
+              <img src="./img/feature-3.png" alt="feature" width="200" height="200">
+            </div>
+            <div class="feature__card--text">世界にひとつだけの<br>
+              一点物アクセサリー</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="question">
+      <div class="question__inner">
+        <div class="question__content">
+          <div class="question__content--head">消費者である私たちが、<br>
+            地球環境のためにできることは何か？</div>
+          <div class="question__content--body">そんな視点からこのブランドは生まれました。<br>
+            オシャレを楽しむ気持ちを大切にしながらも、<br>
+            ただ可愛いだけじゃない環境にやさしいアクセサリーを選ぶ人が増えていったら…<br>
+            その変化は少しずつ、だけども本質的に、<br class="u-sp">この世界をHappyに変えていくのだと、<br class="u-pc">私たちは考えます。</div>
+        </div>
+      </div>
+    </div>
+    <section id="products" class="section products">
+      <div class="products__inner inner">
+        <h2 class="section-title">Products</h2>
+        <div class="products__content">
+
+
+          <div class="products__cards">
+            <a href="#" class="products__card">
+              <div class="products__card--img">
+                <img src="./img/product-1.png" alt="products" width="200" height="200">
+              </div>
+              <div class="products__card--content">
+                <div class="products__card--text">【しかくイヤリング】海洋マイクロプラスチックを使ったハンドメイドイヤリング(全7色)</div>
+                <div class="products__card--price">￥3,695
+                </div>
+              </div>
+            </a>
+            <a href="#" class="products__card">
+              <div class="products__card--img">
+                <img src="./img/product-2.png" alt="products" width="200" height="200">
+              </div>
+              <div class="products__card--content">
+                <div class="products__card--text">【しかく指輪】海洋マイクロプラスチックを使ったハンドメイドアクセサリー/ゆびわ(全7色)
+                </div>
+                <div class="products__card--price">￥2,390
+                </div>
+              </div>
+            </a>
+            <a href="#" class="products__card">
+              <div class="products__card--img">
+                <img src="./img/product-3.png" alt="products" width="200" height="200">
+              </div>
+              <div class="products__card--content">
+                <div class="products__card--text">【ピンバッジ】海洋マイクロプラスチックを使ったsobolonオリジナルピンバッジ(全6色)</div>
+                <div class="products__card--price">￥2,580
+                </div>
+              </div>
+            </a>
+          </div>
+          <button class="button">
+              MORE
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="news" class="section news">
+      <div class="news__inner inner">
+        <h2 class="section-title">News</h2>
+      </div>
+    </section>
+<section class="motto">
+  <div class="motto__inner inner"></div>
+</section>
+    <section id="contact" class="section contact">
+      <div class="contact__inner inner">
+        <h2 class="section-title">Contact</h2>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner inner">
+      <div class="footer__content">
+        <div class="footer__content--logo"></div>
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
