@@ -71,11 +71,11 @@
 .concept2__content--paragraph {
     letter-spacing: -0.001em;
     font-size: 14px;
-    line-height: 171%;
+    line-height: 1.71;
     
     @include mq(pc) {
         font-size: 16px;
-        line-height: 167%;
+        line-height: 1.67;
         max-width: 512px;
         text-align: justify;
 

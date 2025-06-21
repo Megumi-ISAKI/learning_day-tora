@@ -7,14 +7,11 @@
 }
 
 .contact__inner {
-    padding: 56px 0;
+    padding: 56px 15px;
+
     @include mq(pc) {
-      padding: 160px 0;
+        padding: 80px 0;
     }
-
-}
-
-.inner {
 
 }
 
@@ -24,3 +21,233 @@
 
 }
 
+.contact__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1px;
+    gap: 28px;
+
+    @include mq(pc) {
+        gap: 19px;
+    }
+}
+
+.contact__text {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.005em;
+    padding-left: 3px;
+
+    span {
+        color: #E7728E;
+    }
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+
+    @include mq(pc) {
+      max-width: 510px;
+    }
+}
+
+.contact__row {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    @include mq(pc) {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+.contact__head {
+    background: $color-key;
+    font-size: 14px;
+    color: #fff;
+    padding: 4px 16px;
+    width: fit-content;
+
+    @include mq(pc) {
+        font-size: 18px;
+        font-weight: 600;
+        display: flex;
+        width: 172px;
+        height: 40px;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        position: relative;
+        margin-right: 10px;
+
+            // 右向きの矢印を追加
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -8px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 8px solid $color-key;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+    }
+    }
+
+    span {
+        color: #E7728E;
+        font-size: 10px;
+        font-weight: 600;
+        margin-left: 4px;
+    }
+
+}
+
+.contact__data {
+    width: 100%;
+}
+
+.contact__data-radio {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+
+    &--item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        border: 1px solid #fff;
+        color: $color-key;
+        width: 80px;
+        height: 40px;
+        position: relative;
+
+
+    }
+}
+
+.input-radio {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    opacity: 0;
+
+    &:checked {
+        +.contact__data-radio--item {
+            background: $color-key;
+            color: #fff;
+        }
+    }
+}
+
+.input-text,
+.input-textarea {
+    width: 100%;
+    background: #fff;
+    box-shadow: 5px 6px 16px 0px rgba(96, 96, 96, 0.16);
+    border: none;
+    // padding: 4px 16px;
+
+    @include mq(pc) {
+        width: 320px;
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid $color-key;
+    }
+}
+
+.input-text {
+    height: 40px;
+}
+
+.input-textarea {
+    height: 122px;
+
+}
+
+.contact__data-checkbox {
+    position: relative;
+    padding-left: 30px;
+    margin: -4px auto 0;
+
+    @include mq(pc) {
+      margin-top: 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &::before {
+        width: 22px;
+        height: 22px;
+        border: 1px solid $color-key;
+        transition: border-color 0.3s;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 19.414px;
+        height: 14.621px;
+        background: url(../img/checked.png) no-repeat center center / contain;
+        opacity: 0;
+    }
+
+    a {
+        color: $color-key;
+        text-decoration: underline;
+    }
+}
+
+.input-checkbox {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    opacity: 0;
+
+    &:checked {
+        +.contact__data-checkbox {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &:focus {
+        +.contact__data-checkbox {
+            &::before {
+                border-color: $color-key;
+            }
+        }
+    }
+}
+
+.contact__submit {
+    margin-top: -10px;
+    @include mq(pc) {
+      margin-top: 10px;
+    }
+}
