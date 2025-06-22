@@ -3,9 +3,17 @@
 
 .header {
     padding: 14px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 55px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
 
     @include mq(pc) {
-      padding: 16px 0;
+        padding: 16px 0;
+        height: 70px;
     }
 }
 
@@ -16,12 +24,13 @@
     align-items: center;
 
     @include mq(pc) {
-      padding: 0 40px;
+        padding: 0 40px;
     }
 }
 
 .header__logo {
     display: block;
+
     img {
         width: 120px;
         height: auto;
@@ -31,10 +40,18 @@
 .header__nav {
     display: none;
 
-    @include mq(pc) {      
+    @include mq(pc) {
         margin-top: 6px;
         display: flex;
         gap: 46px;
+
+        a {
+            transition: color 0.3s;
+
+            &:hover {
+                color: $color-key;
+            }
+        }
     }
 }
 
@@ -46,29 +63,86 @@
     height: 18px;
 
     @include mq(pc) {
-      display: none;
+        display: none;
     }
-}
 
-.header__icon--bar {
-    position: absolute;
-    background-color: $color-key;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    border-radius: 3px;
-    &:nth-child(1) {
+    span {
+        position: absolute;
+        background-color: $color-key;
         top: 0;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        border-radius: 3px;
+        transition: all 0.3s ease-in-out;
+
+        &:nth-of-type(1) {
+            top: 0;
+        }
+
+        &:nth-of-type(2) {
+            top: 8px;
+        }
+
+        &:nth-of-type(3) {
+            top: 16px;
+        }
+
     }
-    &:nth-child(2) {
-        top: 8px;
-    }
-    &:nth-child(3) {
-        top: 16px;
+
+    &.is-active {
+        span {
+            &:nth-of-type(1) {
+                top: 9px;
+                rotate: 45deg;
+            }
+
+            &:nth-of-type(2) {
+                opacity: 0;
+            }
+
+            &:nth-of-type(3) {
+                top: 10px;
+                rotate: -45deg;
+            }
+        }
     }
 }
 
 .drawer {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: -100%;
+    width: 270px;
+    height: calc(100vh - 60px);
+    background-color: $color-key;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+
+    &.is-active {
+        right: 0;
+    }
+
+    @include mq(pc) {
+        //   display: none;
+    }
 }
+
+.drawer__inner {
+    text-align: right;
+    padding-top: 40px;
+    padding-right: 15px;
+
+}
+
+.drawer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.drawer__list--item {}

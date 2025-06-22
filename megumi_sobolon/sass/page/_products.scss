@@ -1,13 +1,9 @@
 @use "../global/variables" as *;
 @use "../global/mixin" as *;
 
-.section {
+.section {}
 
-}
-
-.products {
-
-}
+.products {}
 
 .products__inner {
     padding: 0 56px;
@@ -22,7 +18,7 @@
     gap: 43px;
 
     @include mq(pc) {
-      gap: 44px;
+        gap: 44px;
     }
 
 }
@@ -46,7 +42,13 @@
     gap: 21px;
 
     @include mq(pc) {
-      max-width: 260px;
+        flex: 1;
+        max-width: 260px;
+        transition: transform 0.3s ease;
+
+        &:hover img {
+            transform: scale(1.05);
+        }
     }
 
 }
@@ -76,4 +78,3 @@
 .products__card--price {
     color: #989898;
 }
-

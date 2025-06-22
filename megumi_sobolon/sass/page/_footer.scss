@@ -1,0 +1,82 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.footer {
+    padding-top: 35px;
+    padding-bottom: 10px;
+    background: #F7F7F7;
+
+    @include mq(pc) {
+        a:hover {
+            opacity: 0.6;
+          
+    }
+    }
+}
+
+.footer__inner {
+    text-align: center;
+
+}
+
+
+.footer__content {}
+
+.footer__logo {
+    img {
+        width: 120px;
+        height: auto;
+
+    }
+
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 22px;
+
+    @include mq(pc) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 32px;
+    }
+}
+
+.footer__link {
+    color: #333;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.footer__sns {
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    @include mq(pc) {
+      padding-top: 14px;
+    }
+}
+
+.footer__sns--twitter {
+    width: 21px;
+}
+
+.footer__sns--instagram,
+.footer__sns--line {
+    width: 18px;
+}
+
+.footer__copyright {
+    padding-top: 24px;
+    color: #888;
+font-size: 12px;
+font-weight: 300;
+
+@include mq(pc) {
+  padding-top: 29px;
+}
+}

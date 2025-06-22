@@ -1,0 +1,32 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.drawer {
+    display: block;
+    position: absolute;
+    bottom: -100%;
+    right: 0;
+    width: 270px;
+    height: 100vh;
+    background-color: $color-key;
+    z-index: 100;
+
+    @include mq(pc) {
+        //   display: none;
+    }
+}
+
+.drawer__inner {
+    height: 100%;
+    padding: 20px;
+}
+
+.drawer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.drawer__list--item {
+    color: #fff;
+}

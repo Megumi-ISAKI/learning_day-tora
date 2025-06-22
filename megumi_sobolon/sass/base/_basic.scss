@@ -9,6 +9,10 @@ body {
     background-color: $background-base;
     line-height: 1.7;
     font-weight: 300;
+    padding-top: 55px;
+    @include mq(pc) {
+     padding-top: 65px; 
+    }
 }
 
 .inner {
@@ -40,3 +44,9 @@ body {
     }
 }
 
+section[id] { /* IDを持つ全てのsection要素に適用 */
+    scroll-margin-top: 60px;
+    @include mq(pc) {
+      scroll-margin-top: 70px;
+    }
+}

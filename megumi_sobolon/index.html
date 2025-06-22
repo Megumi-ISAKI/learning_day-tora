@@ -5,8 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex,nofollow" />
-  <title>Document</title>
+  <title>sobolon</title>
+  <meta name="description" content="海洋マイクロプラスチックを素材としたハンドメイドアクセサリー「sobolon」">
+  <meta property="og:title" content="sobolon" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="sobolon" />
+  <meta property="og:url" content="#" />
+  <meta property="og:image" content="#" />
+  <meta property="og:description" content="海洋マイクロプラスチックを素材としたハンドメイドアクセサリー「sobolon」" />
+  <meta property="og:locale" content="ja_JP" />
+
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./img/favicon.ico">
 
   <!-- フォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +33,7 @@
         </a>
       </h1>
       <!-- メニュー -->
-      <nav class="header__nav">
+      <nav class="header__nav" aria-label="メニュー">
         <a href="#concept" class="header__nav--item">Concept</a>
         <a href="#feature" class="header__nav--item">Feature</a>
         <a href="#products" class="header__nav--item">Products</a>
@@ -31,20 +41,20 @@
         <a href="#contact" class="header__nav--item">Contact</a>
       </nav>
       <!-- ハンバーガーメニュー -->
-      <div class="header__icon">
-        <span class="header__icon--bar"></span>
-        <span class="header__icon--bar"></span>
-        <span class="header__icon--bar"></span>
-      </div>
+      <button class="header__icon" id="js-drawer-btn" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <!-- ドロワーメニュー -->
       <div class="drawer">
         <div class="drawer__inner">
-          <nav class="drawer__nav">
-            <ul class="drawer__list">
-              <li><a href=""></a></li>
-              <li><a href="#"></a></li>
-            </ul>
-            <a href="#contact" class="drawer__btn">Contact</a>
+          <nav class="drawer__nav" aria-label="メニュー">
+            <a href="#concept" class="drawer__list--item">Concept</a>
+            <a href="#feature" class="drawer__list--item">Feature</a>
+            <a href="#products" class="drawer__list--item">Products</a>
+            <a href="#news" class="drawer__list--item">News</a>
+            <a href="#contact" class="drawer__list--item">Contact</a>
           </nav>
         </div>
       </div>
@@ -175,7 +185,7 @@
         <h2 class="section-title">News</h2>
         <div class="news__content">
           <div class="news__cards">
-            <div class="news__card">
+            <a href="#" class="news__card">
               <div class="news__card--img">
                 <img src="./img/news-1.png" alt="news" width="200" height="200">
               </div>
@@ -189,7 +199,7 @@
                     )/来てくださったみなさん本当にありがとうございました！やっぱり、地元多治見での出店はみ…</p>
                 </div>
               </div>
-            </div>
+            </a>
             <a href="#" class="news__card">
               <div class="news__card--img">
                 <img src="./img/news-2.png" alt="news" width="200" height="200">
@@ -251,13 +261,13 @@
             <div class="contact__row">
               <p class="contact__head">お名前<span>＊</span></p>
               <div class="contact__data">
-                <input type="text" placeholder="" class="input-text" name="yourName" id="yourName">
+                <input type="text" placeholder="" class="input-text" name="yourName" id="yourName" aria-label="お名前">
               </div>
             </div>
             <div class="contact__row">
               <p class="contact__head">メールアドレス<span>＊</span></p>
               <div class="contact__data">
-                <input type="email" placeholder="" class="input-text" name="yourEmail" id="yourEmail">
+                <input type="email" placeholder="" class="input-text" name="yourEmail" id="yourEmail" aria-label="メールアドレス">
               </div>
             </div>
             <div class="contact__row">
@@ -278,7 +288,7 @@
             <div class="contact__row">
               <p class="contact__head">お問い合わせ内容<span>＊</span></p>
               <div class="contact__data">
-                <textarea name="message" class="input-textarea" id="message"></textarea>
+                <textarea name="message" class="input-textarea" id="message" aria-label="お問い合わせ内容"></textarea>
               </div>
             </div>
             <div class="contact__row">
@@ -288,7 +298,7 @@
               </label>
             </div>
             <div class="contact__submit">
-              <input type="submit" value="送信" class="button">
+              <input type="submit" value="送信" class="button" aria-label="送信">
             </div>
           </form>
         </div>
@@ -298,14 +308,27 @@
   <footer class="footer">
     <div class="footer__inner inner">
       <div class="footer__content">
-        <div class="footer__content--logo">
+        <div class="footer__logo">
+          <a href="#"><img src="./img/logo.png" alt="sobolon" width="240" height="44"></a>
+        </div>
+        <div class="footer__links">
+          <a href="#" class="footer__link">プライバシーポリシー</a>
+          <a href="#" class="footer__link">特定商取引法に基づく表記</a>
+        </div>
+        <div class="footer__sns">
+          <a href="#"><img src="./img/twitter.png" alt="twitter" width="24" height="24"
+              class="footer__sns--twitter"></a>
+          <a href="#"><img src="./img/instagram.png" alt="instagram" width="24" height="24"
+              class="footer__sns--instagram"></a>
+          <a href="#"><img src="./img/line.png" alt="line" width="24" height="24" class="footer__sns--line"></a>
         </div>
       </div>
+      <div class="footer__copyright">&copy; 2020 sobolon All rights reserved</div>
     </div>
   </footer>
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
-  <script src="script.js" defer></script>
+  <script src="./js/script.js" defer></script>
 </body>
 
 </html>

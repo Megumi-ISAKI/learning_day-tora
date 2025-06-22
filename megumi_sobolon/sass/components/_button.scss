@@ -18,8 +18,11 @@
     font-size: 14px;
     font-weight: 600;
 
-    &:hover {
-        background: $color-key;
-        color: #fefefe;
+    @include mq(pc) {
+
+        &:hover {
+            background: $color-key;
+            color: #fefefe;
+        }
     }
 }
