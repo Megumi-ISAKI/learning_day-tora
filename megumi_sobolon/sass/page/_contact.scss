@@ -157,7 +157,7 @@
     background: #fff;
     box-shadow: 5px 6px 16px 0px rgba(96, 96, 96, 0.16);
     border: none;
-    // padding: 4px 16px;
+    padding: 4px 8px;
 
     @include mq(pc) {
         width: 320px;

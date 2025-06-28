@@ -195,6 +195,7 @@ section[id] { /* IDを持つ全てのsection要素に適用 */
   .button:hover {
     background: #3EA1D1;
     color: #fefefe;
+    cursor: pointer;
   }
 }
 
@@ -681,10 +682,8 @@ section[id] { /* IDを持つ全てのsection要素に適用 */
         -ms-flex: 1;
             flex: 1;
     max-width: 260px;
-    -webkit-transition: -webkit-transform 0.3s ease;
-    transition: -webkit-transform 0.3s ease;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   .products__card:hover img {
     -webkit-transform: scale(1.05);
@@ -698,6 +697,10 @@ section[id] { /* IDを持つ全てのsection要素に適用 */
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .products__card--content {
@@ -788,6 +791,10 @@ section[id] { /* IDを持つ全てのsection要素に適用 */
     transition: -webkit-transform 0.3s ease;
     transition: transform 0.3s ease;
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  }
+  .news__card img {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   .news__card:hover img {
     -webkit-transform: scale(1.05);
@@ -1153,6 +1160,7 @@ section[id] { /* IDを持つ全てのsection要素に適用 */
   -webkit-box-shadow: 5px 6px 16px 0px rgba(96, 96, 96, 0.16);
           box-shadow: 5px 6px 16px 0px rgba(96, 96, 96, 0.16);
   border: none;
+  padding: 4px 8px;
 }
 @media screen and (min-width: 768px) {
   .input-text,
